@@ -38,17 +38,11 @@ namespace Lab01ExceptionHandlingAndDebugging
 
                 int[] initalArray = new int[numberFromUser];
 
-                //Testing DELETE LATER
-                Console.WriteLine($"You entered {numberFromUser}");
-
                 Populate(initalArray);
-
                 int outputFromGetSum = GetSum(initalArray);
                 int outputFromGetProduct = GetProduct(initalArray, outputFromGetSum);
-
-                Console.WriteLine($"this is the sum: {outputFromGetProduct}");
-                // int product = GetProduct(int[], sums)
-                // int quotient = getQuotient(product)
+                decimal outputFromGetQuotient = GetQuotient(outputFromGetProduct);
+              
 
             }
             catch (FormatException)
@@ -111,11 +105,33 @@ namespace Lab01ExceptionHandlingAndDebugging
                 throw;
             }
 
-            return product; // Change later
+            return product;
         }
 
         //Get Quotient
         // static decimal (int [from GetProduct)
+
+        static decimal GetQuotient(int inputNumber)
+        {
+            decimal convertInputToDec = Convert.ToDecimal(inputNumber);
+
+            Console.WriteLine($"Please enter a number to divide your product {inputNumber} by");
+            decimal userInputedNumber = Convert.ToDecimal(Console.ReadLine());
+
+            decimal outputNumber;
+
+            try
+            {
+                outputNumber = Decimal.Divide(convertInputToDec, userInputedNumber);
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine($"Tried to divide by Zero: {e.Message}");
+                return 0;
+            }
+
+            return outputNumber;
+        }
 
     }
 }
