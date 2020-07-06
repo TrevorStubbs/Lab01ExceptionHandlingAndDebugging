@@ -31,19 +31,20 @@ Then select and open ```Lab01ExceptionHandlingAndDebugging.sln```
 
 ### Visuals *TODO*
 #### Application Start
-![Image 1](https://via.placeholder.com/750x500)
+![Start](images/Lab01aStart.png)
 #### Using the Application
-![Image 1](https://via.placeholder.com/750x500)
+![Middle](images/Lab01aMid.png)
 #### Application End
-![Image 1](https://via.placeholder.com/750x500)
+![Finished](images/Lab01aFin.png)
 
 ---
 
 ### Change Log
-1.0: Initial Repo Setup
-1.1: StartSequence Method Outline Complete
-1.2: Populate Method Complete
-1.3: GetSum Method Complete
-1.4: GetProduct Method Complete
-1.5: GetQuotient Method Complete
-1.6: StartSequence Method Complete
+- 1.0: Initial Repo Setup
+- 1.1: StartSequence Method Outline Complete
+- 1.2: Populate Method Complete
+- 1.3: GetSum Method Complete
+- 1.4: GetProduct Method Complete
+- 1.5: GetQuotient Method Complete
+- 1.6: StartSequence Method Complete
+- 1.7: Cleanup and Comments
