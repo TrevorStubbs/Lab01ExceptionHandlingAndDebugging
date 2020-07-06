@@ -44,4 +44,4 @@ Then select and open ```Lab01ExceptionHandlingAndDebugging.sln```
 1.1: StartSequince Method Outline Complete
 1.2: Populate Method Complete
 1.3: GetSum Method Complete
-
+1.4: GetProduct Method Complete
