@@ -6,7 +6,6 @@ namespace Lab01ExceptionHandlingAndDebugging
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             try
             {
                 StartSequence();
@@ -26,13 +25,10 @@ namespace Lab01ExceptionHandlingAndDebugging
 
             try
             {
-                // User to Enter a number greater than zero
                 Console.WriteLine("Welcome to my game! Let's do some math!");
 
                 Console.WriteLine("Enter a number greater than zero.");
                 int numberFromUser = Convert.ToInt32(Console.ReadLine());
-                // maybe put a while loop in to make sure numbeFromUser != 0
-
 
                 int[] initalArray = new int[numberFromUser];
 
@@ -40,7 +36,22 @@ namespace Lab01ExceptionHandlingAndDebugging
                 int outputFromGetSum = GetSum(initalArray);
                 int outputFromGetProduct = GetProduct(initalArray, outputFromGetSum);
                 decimal outputFromGetQuotient = GetQuotient(outputFromGetProduct);
-              
+
+                Console.WriteLine($"Your array is size: {numberFromUser}");
+
+                Console.Write("The numbers in the array are ");
+                for (int i = 0; i < initalArray.Length; i++)
+                {
+                    if (i == initalArray.Length)
+                        Console.Write($"{initalArray[i]}");
+                    else
+                        Console.Write($"{initalArray[i]}, ");
+                }
+
+                Console.WriteLine();
+                Console.WriteLine($"The sum of the array is {outputFromGetSum}");
+                Console.WriteLine($"{outputFromGetSum} * {outputFromGetProduct/outputFromGetSum} = {outputFromGetProduct}");
+                Console.WriteLine($"{outputFromGetProduct} / {outputFromGetProduct / outputFromGetQuotient} = {outputFromGetQuotient}");              
 
             }
             catch (FormatException)
@@ -63,7 +74,6 @@ namespace Lab01ExceptionHandlingAndDebugging
             {
                 Console.WriteLine($"Please enter a number: {i + 1}/{inputArray.Length}");
                 inputArray[i] = Convert.ToInt32(Console.ReadLine());
-
             }
             return inputArray;
         }
@@ -121,6 +131,5 @@ namespace Lab01ExceptionHandlingAndDebugging
 
             return outputNumber;
         }
-
     }
 }
