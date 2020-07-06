@@ -41,17 +41,18 @@ namespace Lab01ExceptionHandlingAndDebugging
                 //Testing DELETE LATER
                 Console.WriteLine($"You entered {numberFromUser}");
 
-                // Populate();
+                Populate(initalArray);
+
                 // int[] sums = GetSum(int[])
                 // int product = GetProduct(int[], sums)
                 // int quotient = getQuotient(product)
 
             }
-            catch (FormatException e)
+            catch (FormatException)
             {
                 Console.WriteLine($"You did not enter a number");
             }
-            catch (OverflowException e)
+            catch (OverflowException)
             {
                 Console.WriteLine($"Your number was not greater than zero");
             }
@@ -63,6 +64,16 @@ namespace Lab01ExceptionHandlingAndDebugging
 
         //Populate
         // static int[] (int [])
+        static int[] Populate(int[] inputArray)
+        {        
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                Console.WriteLine($"Please enter a number: {i + 1}/{inputArray.Length}");
+                inputArray[i] = Convert.ToInt32(Console.ReadLine());
+
+            }
+            return inputArray;
+        }
 
         //GetSum
         // static int (int[])
