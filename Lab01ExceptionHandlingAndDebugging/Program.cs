@@ -44,8 +44,9 @@ namespace Lab01ExceptionHandlingAndDebugging
                 Populate(initalArray);
 
                 int outputFromGetSum = GetSum(initalArray);
+                int outputFromGetProduct = GetProduct(initalArray, outputFromGetSum);
 
-                Console.WriteLine($"this is the sum: {outputFromGetSum}");
+                Console.WriteLine($"this is the sum: {outputFromGetProduct}");
                 // int product = GetProduct(int[], sums)
                 // int quotient = getQuotient(product)
 
@@ -89,11 +90,29 @@ namespace Lab01ExceptionHandlingAndDebugging
             if (sum < 20)
                 throw (new Exception($"Value of {sum} is too low."));
 
-            return sum; // Change later
+            return sum;
         }
 
         //GetProduct
         // static int (int[])
+        static int GetProduct(int[] inputArray, int inputSum)
+        {
+            int product;
+
+            try
+            {
+            Console.WriteLine($"Please select a random number between 1 and {inputArray.Length}");
+            int userChosenNumber = inputArray[Convert.ToInt32(Console.ReadLine())];
+            product = userChosenNumber * inputSum;
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine($"Error message: {e.Message}");
+                throw;
+            }
+
+            return product; // Change later
+        }
 
         //Get Quotient
         // static decimal (int [from GetProduct)
