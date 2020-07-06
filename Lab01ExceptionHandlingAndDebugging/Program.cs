@@ -21,8 +21,6 @@ namespace Lab01ExceptionHandlingAndDebugging
             }
         }
 
-        //StartSequence
-        //  static void (no params)
         static void StartSequence()
         {
 
@@ -59,8 +57,6 @@ namespace Lab01ExceptionHandlingAndDebugging
             }
         }
 
-        //Populate
-        // static int[] (int [])
         static int[] Populate(int[] inputArray)
         {
             for (int i = 0; i < inputArray.Length; i++)
@@ -72,8 +68,6 @@ namespace Lab01ExceptionHandlingAndDebugging
             return inputArray;
         }
 
-        //GetSum
-        // static int (int[])
         static int GetSum(int[] inputArray)
         {
             int sum = 0;
@@ -87,8 +81,6 @@ namespace Lab01ExceptionHandlingAndDebugging
             return sum;
         }
 
-        //GetProduct
-        // static int (int[])
         static int GetProduct(int[] inputArray, int inputSum)
         {
             int product;
@@ -107,9 +99,6 @@ namespace Lab01ExceptionHandlingAndDebugging
 
             return product;
         }
-
-        //Get Quotient
-        // static decimal (int [from GetProduct)
 
         static decimal GetQuotient(int inputNumber)
         {
