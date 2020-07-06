@@ -41,4 +41,5 @@ Then select and open ```Lab01ExceptionHandlingAndDebugging.sln```
 
 ### Change Log
 1.0: Initial Repo Setup
+1.1: StartSequince Method Outline Complete
 

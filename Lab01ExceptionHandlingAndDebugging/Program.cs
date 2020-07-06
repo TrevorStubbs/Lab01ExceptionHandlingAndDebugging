@@ -25,14 +25,22 @@ namespace Lab01ExceptionHandlingAndDebugging
         //  static void (no params)
         static void StartSequence()
         {
-            // User to Enter a number greater than zero
-            Console.WriteLine("Welcome to my game! Let's do some math!");
-            Console.WriteLine("Enter a number greater than zero.");
-            int numberFromUser = Convert.ToInt32(Console.ReadLine());
 
-            int[] initalArray = new int[numberFromUser];
             try
             {
+                // User to Enter a number greater than zero
+                Console.WriteLine("Welcome to my game! Let's do some math!");
+
+                Console.WriteLine("Enter a number greater than zero.");
+                int numberFromUser = Convert.ToInt32(Console.ReadLine());
+                // maybe put a while loop in to make sure numbeFromUser != 0
+
+
+                int[] initalArray = new int[numberFromUser];
+
+                //Testing DELETE LATER
+                Console.WriteLine($"You entered {numberFromUser}");
+
                 // Populate();
                 // int[] sums = GetSum(int[])
                 // int product = GetProduct(int[], sums)
@@ -41,13 +49,13 @@ namespace Lab01ExceptionHandlingAndDebugging
             }
             catch (FormatException e)
             {
-                Console.WriteLine($"{numberFromUser} is not a number");
+                Console.WriteLine($"You did not enter a number");
             }
             catch (OverflowException e)
             {
-                Console.WriteLine($"{numberFromUser} is not greater than zero");
+                Console.WriteLine($"Your number was not greater than zero");
             }
-            catch (Exception) // TODO find specific error
+            catch (Exception)
             {
                 throw;
             }
