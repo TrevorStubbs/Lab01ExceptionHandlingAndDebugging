@@ -45,3 +45,4 @@ Then select and open ```Lab01ExceptionHandlingAndDebugging.sln```
 1.2: Populate Method Complete
 1.3: GetSum Method Complete
 1.4: GetProduct Method Complete
+1.5: GetQuotient Method Complete
