@@ -43,7 +43,9 @@ namespace Lab01ExceptionHandlingAndDebugging
 
                 Populate(initalArray);
 
-                // int[] sums = GetSum(int[])
+                int outputFromGetSum = GetSum(initalArray);
+
+                Console.WriteLine($"this is the sum: {outputFromGetSum}");
                 // int product = GetProduct(int[], sums)
                 // int quotient = getQuotient(product)
 
@@ -65,7 +67,7 @@ namespace Lab01ExceptionHandlingAndDebugging
         //Populate
         // static int[] (int [])
         static int[] Populate(int[] inputArray)
-        {        
+        {
             for (int i = 0; i < inputArray.Length; i++)
             {
                 Console.WriteLine($"Please enter a number: {i + 1}/{inputArray.Length}");
@@ -77,6 +79,18 @@ namespace Lab01ExceptionHandlingAndDebugging
 
         //GetSum
         // static int (int[])
+        static int GetSum(int[] inputArray)
+        {
+            int sum = 0;
+
+            foreach (int number in inputArray)
+                sum += number;
+
+            if (sum < 20)
+                throw (new Exception($"Value of {sum} is too low."));
+
+            return sum; // Change later
+        }
 
         //GetProduct
         // static int (int[])
