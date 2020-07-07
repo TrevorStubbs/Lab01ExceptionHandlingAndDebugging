@@ -119,7 +119,7 @@ namespace Lab01ExceptionHandlingAndDebugging
             try
             {
             Console.WriteLine($"Please select a random number between 1 and {inputArray.Length}");
-            int userChosenNumber = inputArray[Convert.ToInt32(Console.ReadLine())];
+            int userChosenNumber = inputArray[Convert.ToInt32(Console.ReadLine()) - 1];
             product = userChosenNumber * inputSum;
             }
             catch (IndexOutOfRangeException e)
